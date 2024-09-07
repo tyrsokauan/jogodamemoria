@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <title>Jogo da Memória</title>
+
+    <style>
+        /* Estilos CSS personalizados para a caixa modal */
+        .modal {
+            background-color: #f5f5f5;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 50px 30px;
+            /* Ajustado o padding para 50px na vertical e 30px na horizontal */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 400px;
+            /* Limitado a largura da caixa modal */
+            width: 80%;
+            /* Adicionado uma largura para telas menores */
+            color: #000;
+        }
+
+        .modal h2 {
+            margin-bottom: 20px;
+        }
+
+        .modal p {
+            margin-bottom: 30px;
+        }
+
+        .view-ranking-button {
+            /* Botão "Jogue Novamente" */
+            padding: 15px 30px;
+            background-color: #333;
+            /* Cor de fundo */
+            color: #fff;
+            /* Cor do texto */
+            border-radius: 8px;
+            border: none;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+
+        }
+
+        /* Ajuste para telas menores */
+        @media (max-width: 600px) {
+            .modal {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <span class="player"></span>
+            <span>Tempo: <span class="timer">00</span></span>
+        </header>
+
+        <div class="grid"></div>
+    </main>
+
+    <!-- Caixa modal -->
+    <div class="modal" id="modal" style="display: none;">
+        <h2>Parabéns, <span id="playerName"></span>!</h2>
+        <p>Seu tempo foi de: <span id="playerTime"></span> segundos</p>
+        <a href="../index.html" class="view-ranking-button">Jogue Novamente</a>
+        <!-- Botão atualizado para "Jogue Novamente" -->
+    </div>
+
+    <script>
+        // JavaScript para fechar a caixa modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+    <script defer src="../js/game.js"></script>
+</body>
+
+</html>

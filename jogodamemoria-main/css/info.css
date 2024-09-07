@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: left;
+    max-width: 600px; /* Largura máxima da caixa de informações */
+}
+
+h1 {
+    color: #333; /* Cor do título */
+    text-align: center; /* Centralizar título */
+}
+
+p {
+    color: #555; /* Cor do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    color: #fff; /* Cor do texto do link */
+    background-color: #007bff; /* Cor de fundo do link */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content; /* Ajusta a largura do link conforme o conteúdo */
+    margin: 0 auto; /* Centraliza o link */
+}
+
+a:hover {
+    background-color: #0056b3; /* Cor de fundo do link quando hover */
+}
